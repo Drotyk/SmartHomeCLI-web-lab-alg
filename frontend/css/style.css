@@ -1,0 +1,141 @@
+/* --- MONOCHROME THEME --- */
+:root {
+    --bg-body: #fafafa;
+    --bg-card: #ffffff;
+    --text-main: #111111;
+    --text-muted: #666666;
+    --border-light: #e0e0e0;
+    --accent-black: #222222;
+    --accent-hover: #444444;
+}
+
+body { 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+    background: var(--bg-body); 
+    color: var(--text-main);
+    padding: 20px; 
+}
+
+.container { max-width: 900px; margin: 0 auto; }
+
+h1, h2 { color: var(--text-main); letter-spacing: -0.5px; }
+
+/* Картки */
+.room-card, .create-panel { 
+    background: var(--bg-card); 
+    padding: 0 25px 25px 25px; 
+    margin-bottom: 25px; 
+    border-radius: 8px; 
+    border: 1px solid var(--border-light);
+}
+
+/* Акцент кімнати - чорна лінія зліва */
+.room-card { 
+    border-left: 6px solid var(--accent-black); 
+}
+
+.room-title { 
+    padding: 20px 0; 
+    border-bottom: 2px solid var(--border-light); 
+    margin-bottom: 20px; 
+    font-size: 1.5em; 
+    font-weight: 700;
+}
+
+.device-row { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    border-bottom: 1px solid var(--border-light); 
+    padding: 15px 0; 
+}
+.device-row:last-child { border-bottom: none; }
+
+.device-meta { display: flex; flex-direction: column; }
+.sys-name { font-weight: 600; font-size: 1.1em; }
+.model-name { font-size: 0.9em; color: var(--text-muted); margin-top: 4px; }
+
+.status-badge { 
+    background: #f0f0f0; 
+    color: var(--text-main);
+    padding: 3px 8px; 
+    border-radius: 4px; 
+    font-size: 0.85em; 
+    margin-left: 10px; 
+    border: 1px solid #ccc;
+    font-family: monospace;
+}
+
+/* --- КНОПКИ --- */
+button { 
+    padding: 10px 18px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-weight: 600;
+    transition: all 0.2s ease; 
+    margin-left: 8px; 
+    font-size: 0.9em;
+}
+
+/* Активні дії (ON, SET, COOL, ADD) */
+.btn-on, .btn-set, .btn-add { 
+    background: var(--accent-black); 
+    color: white;
+    border: 2px solid var(--accent-black);
+}
+.btn-on:hover, .btn-set:hover, .btn-add:hover { 
+    background: var(--accent-hover); 
+    border-color: var(--accent-hover);
+}
+
+/* Неактивні дії (OFF) */
+.btn-off { 
+    background: transparent; 
+    color: var(--accent-black);
+    border: 2px solid var(--border-light);
+}
+.btn-off:hover { 
+    background: var(--accent-black); 
+    color: white;
+    border-color: var(--accent-black);
+}
+
+/* Кнопка видалення */
+.btn-del { 
+    background: transparent; 
+    color: #aaa; 
+    border: 1px solid transparent; 
+    padding: 8px 12px; 
+    font-size: 1.2em;
+    line-height: 1;
+}
+.btn-del:hover { 
+    color: var(--accent-black); 
+    background: #f5f5f5;
+    border-color: var(--border-light);
+}
+
+/* Панель створення */
+.create-panel { margin-top: 40px; padding: 25px; }
+.form-row { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
+
+/* Інпути */
+input, select { 
+    padding: 12px; 
+    border: 2px solid var(--border-light); 
+    border-radius: 4px; 
+    flex-grow: 1; 
+    background: var(--bg-card);
+    color: var(--text-main);
+    font-size: 1em;
+}
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--accent-black);
+}
+
+.btn-add { flex-grow: 0; min-width: 180px; margin-left: 0; }
+
+input[type="range"] { vertical-align: middle; width: 120px; accent-color: var(--accent-black); }
+input[type="number"] { width: 70px; flex-grow: 0; text-align: center;}

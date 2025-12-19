@@ -1,0 +1,4 @@
+1|light|living room|lamp|1|1
+2|light|living room|lamp|0|0
+3|dimmer|Bedroom|Dimmer|83|0
+4|ac|living room|Climate Control|22|1
