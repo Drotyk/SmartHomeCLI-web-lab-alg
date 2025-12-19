@@ -90,8 +90,7 @@ public:
     using IDevice::IDevice;
     void turnOn() override { isOn = true; }
     void turnOff() override { isOn = false; }
-    
-    // --- ВИПРАВЛЕНО ТУТ ---
+
     void setValue(int val) override {
         if (val < 16) val = 16; 
         if (val > 30) val = 30;
